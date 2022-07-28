@@ -7,6 +7,8 @@ def main(lim):
         return False
 
     # create dictionary containing game rules
+    # composite valued keys risk rule collisions with their prime factors
+    # prime valued keys are highly recommended to guarantee no rule collisions
     rules = {
             3: "Fizz",
             5: "Buzz",
