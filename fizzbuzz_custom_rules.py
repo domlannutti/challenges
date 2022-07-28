@@ -1,10 +1,10 @@
-def main(lim):
+def main(lim: int) -> None:
     # exit function if limit is less than zero
     if lim < 0:
-        return False
+        return None
     # exit function if limit is not an integer
     elif lim % 1 != 0:
-        return False
+        return None
 
     # create dictionary containing game rules
     # composite valued keys risk rule collisions with their prime factors
@@ -22,12 +22,11 @@ def main(lim):
             if n % k == 0:
                 s += v
         if len(s) > 0:
-            yield s
+            print(s)
         else:
-            yield n
+            print(n)
 
 
 if __name__ == "__main__":
     lim = 200
-    for ans in main(lim):
-        print(ans)
+    main(lim)
