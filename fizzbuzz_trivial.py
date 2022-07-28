@@ -1,7 +1,7 @@
 # Author: Dominic Lannutti
 # Date: 31 January 2022
 
-def main(lim):
+def main(lim: int) -> int:
     # exit function if given limit is not an integer
     if lim % 1 != 0:
         return False
